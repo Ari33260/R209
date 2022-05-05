@@ -1,0 +1,26 @@
+make entity
+make migration
+
+
+sf console make:Entity (Entity => c'est une table)
+
+> Ville (rentrer le nom de la table)
+> nom (ne pas rentrer id, sf le créer automatiquement
+> [appuyer sur entrée]
+> [appuyer sur entrée]
+> no (trad : "Est-ce que ce champ peut être nul ?")
+> [appuyer sur entrée] (si il faut créer de nouvelles propriétés)
+sf console make:migration
+sf console d:m:m
+> yes
+
+POUR CREER UNE RELATION
+> relation
+> [Nom de l'autre clef]
+> ManyTools
+> no
+>
+> 
+> 
+sf console make:migration
+sf console d:m:m

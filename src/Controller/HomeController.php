@@ -23,4 +23,15 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+	
+    /**
+	 * @IsGranted("ROLE_ADMIN")
+     * @Route("/formations", name="app_formations")
+     */
+    public function formations(): Response
+    {
+        return $this->render('home/formations.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
